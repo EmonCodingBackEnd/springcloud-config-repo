@@ -1,4 +1,13 @@
 env: none
 
+zuul:
+  routes:
+#    myProduct:
+#      path: /myProduct/**
+#      serviceId: product
+    product: /myProduct/**
+  ignored-patterns:
+    - /**/msg
+    
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml

@@ -18,6 +18,15 @@ spring:
       ddl-auto: none
     # 解决MySQL8.0下错误:Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
     database-platform: org.hibernate.dialect.MySQLDialect
+  cache:
+    type: redis
+    cache-names: redisCache
+  redis:
+    database: 0
+    host: ${prod.host}
+    port: 6379
+    timeout: 0
+    password: redis@163
 
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml

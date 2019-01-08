@@ -11,6 +11,7 @@ spring:
     url: jdbc:mysql://${prod.host}/selldb?characterEncoding=utf-8&useSSL=false
   rabbitmq:
     host: ${prod.host}
+    port: 5672
   jpa:
     show-sql: true
     hibernate:

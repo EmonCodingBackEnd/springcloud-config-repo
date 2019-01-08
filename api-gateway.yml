@@ -1,0 +1,4 @@
+env: none
+
+logging:
+  config: classpath:logback-spring-${spring.profiles.active}.xml

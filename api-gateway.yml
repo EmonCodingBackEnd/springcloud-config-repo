@@ -7,7 +7,7 @@ zuul:
 #      serviceId: product
     product: /myProduct/**
   ignored-patterns:
-    - /**/msg
-    
+#    - /**/msg
+
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml

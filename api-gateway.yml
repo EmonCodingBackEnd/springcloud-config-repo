@@ -9,5 +9,16 @@ zuul:
   ignored-patterns:
     - /**/msg
 
+sprint:
+  cache:
+    type: redis
+    cache-names: redisCache
+  redis:
+    database: 0
+    host: ${prod.host}
+    port: 6379
+    timeout: 0
+    password: redis@163
+
 logging:
   config: classpath:logback-spring-${spring.profiles.active}.xml
